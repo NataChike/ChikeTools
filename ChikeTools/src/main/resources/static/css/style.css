@@ -1,0 +1,77 @@
+body {
+	background-color: #ffffff;
+}
+
+/* ヘッダー */
+header {
+	margin-bottom: 16px;
+	padding: 8px;
+	height: 100px;
+	background-color: #373737;
+}
+
+header h1 {
+	font-size: 1.8rem;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #959595
+}
+
+.icon img {
+	height: 100%;
+	/* ヘッダーと同じ高さに */
+	width: auto;
+	/* 比率を維持 */
+	object-fit: contain;
+}
+
+.contact a {
+	color: darkgrey;
+	font-size: 20px;
+}
+
+.contact a:hover {
+	color: #ffffff;
+}
+h2.subtitle {
+	margin-bottom:16px;
+}
+
+/* 左カード高さ固定 */
+.flex-grow-2 {
+	flex-grow: 0;
+	height: 200px;
+	overflow-y: auto;
+}
+
+.flex-grow-3 {
+	flex-grow: 0;
+	height: 300px;
+	overflow-y: auto;
+}
+
+/* スマホ用（幅768px未満） */
+@media (max-width: 767.98px) {
+	header {
+		margin-bottom: 8px;
+	}
+
+	div.left-column {
+		margin-top: 8px;
+	}
+
+	header h1 {
+		flex: 0 0 70%;
+	}
+
+	.icon img {
+		flex: 0 0 30%;
+	}
+	
+	.contact a:hover {
+	color: #373737;
+}
+}
+
+/* PC用（幅768px以上） */
+@media (min-width: 768px) {}
