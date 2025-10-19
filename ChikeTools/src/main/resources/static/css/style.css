@@ -17,6 +17,10 @@ header h1 {
 	color: #959595
 }
 
+.icon, .icon a {
+  height: 100%;
+}
+
 .icon img {
 	height: 100%;
 	/* ヘッダーと同じ高さに */
@@ -67,10 +71,12 @@ h2.subtitle {
 	.icon img {
 		flex: 0 0 30%;
 	}
-	
-	.contact a:hover {
+	.contact a {
 	color: #373737;
-}
+	}
+	.contact a:hover {
+	color: #aaaaaa;
+	}
 }
 
 /* PC用（幅768px以上） */

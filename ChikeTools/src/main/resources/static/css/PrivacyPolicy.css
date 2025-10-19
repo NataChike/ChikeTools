@@ -1,0 +1,14 @@
+li{
+	font-size: 20px;
+	margin-bottom: 16px;
+}
+img{
+	border: 1px solid #333;
+	border-radius: 8px; 
+	margin-bottom: 16px;
+	max-width: 100%;
+    height: auto;
+}
+p{
+	font-size: 20px;
+}

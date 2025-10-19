@@ -9,4 +9,12 @@ public class TopController {
 	public String index() {
 		return "index";
 	}
+	@GetMapping("privacy-policy")
+	public String privacyPolicy(){
+		return "privacyPolicy";
+	}
+	@GetMapping("terms")
+	public String Terms() {
+		return "terms";
+	}
 }
