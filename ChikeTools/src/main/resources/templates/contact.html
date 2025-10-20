@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{base}">
+
+<!-- head-extra は必要ならここに追加 -->
+<section layout:fragment="head-extra">
+  <!-- 例: このページ専用のCSSを読み込みたいとき
+  <link rel="stylesheet" th:href="@{/css/contact.css}"> -->
+</section>
+
+<section layout:fragment="content">
+  <main class="flex-grow-1 container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h2 class="mb-3">お問い合わせ</h2>
+
+        <!-- フラッシュメッセージ（成功／エラー） -->
+        <div th:if="${successMessage}" class="alert alert-success" th:text="${successMessage}"></div>
+        <div th:if="${errorMessage}" class="alert alert-danger" th:text="${errorMessage}"></div>
+
+        <!-- フォーム -->
+        <form th:action="@{/contact}" th:object="${contactForm}" method="post" novalidate>
+<!--           CSRF トークン（Spring Security を使う場合） -->
+<!--          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
+
+          <div class="mb-3">
+            <label for="name" class="form-label">お名前 <span class="text-muted small">(任意)</span></label>
+            <input id="name" type="text" class="form-control" th:field="*{name}" placeholder="例：田中 太郎">
+            <div class="text-danger small" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">メールアドレス <span class="text-danger">*</span></label>
+            <input id="email" type="email" class="form-control" th:field="*{email}" placeholder="you@example.com" required>
+            <div class="text-danger small" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">件名 <span class="text-danger">*</span></label>
+            <input id="subject" type="text" class="form-control" th:field="*{subject}" placeholder="件名を入力" required>
+            <div class="text-danger small" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">お問い合わせ内容 <span class="text-danger">*</span></label>
+            <textarea id="message" class="form-control" th:field="*{message}" rows="6" placeholder="詳細を入力してください" required></textarea>
+            <div class="text-danger small" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+          </div>
+
+          <!-- 任意：スクリーンショット等の添付を許す場合（バックエンドで処理が必要） -->
+          <!--
+          <div class="mb-3">
+            <label for="file" class="form-label">添付（任意）</label>
+            <input id="file" type="file" class="form-control" name="file">
+          </div>
+          -->
+
+          <!-- 任意：非表示の honeypot（簡易ボット対策） -->
+          <div style="display:none;">
+            <label>もし表示されたら入力しないでください<input name="fax" /></label>
+          </div>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="/" class="btn btn-outline-secondary">戻る</a>
+            <button type="submit" class="btn btn-primary">送信する</button>
+          </div>
+        </form>
+
+        <hr class="my-4">
+
+        <div>
+          <h6>注意事項</h6>
+          <p class="small text-muted mb-0">※ 個人情報はプライバシーポリシーに従って取り扱います。返信には時間がかかる場合があります。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+</html>
