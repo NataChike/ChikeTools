@@ -3,10 +3,14 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{base}">
 
-<!-- head-extra は必要ならここに追加 -->
+<title layout:fragment="title">
+	ちけの便利ツール | お問い合わせ
+</title>
+<section layout:fragment="page-title">
+  お問い合わせ
+</section>
+<!-- ページ専用CSSを追加 -->
 <section layout:fragment="head-extra">
-  <!-- 例: このページ専用のCSSを読み込みたいとき
-  <link rel="stylesheet" th:href="@{/css/contact.css}"> -->
 </section>
 
 <section layout:fragment="content">

@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{base}">
-	  <head>
-	  	<meta charset="UTF-8">
-	  	<title layout:fragment="title">ちけの便利ツール</title>
-	  	<!-- ページ専用CSSを追加 -->
-	  	<section layout:fragment="head-extra">
-	  	</section>
-	  </head>
-	  <section layout:fragment="content">
-  <!-- メイン -->
-  <main class="flex-grow-1 container">
-    <h2 class="subtitle">提供中のツール</h2>
-    <div class="row g-4">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{base}">
 
-      <!-- DQX 職人素材計算機 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">DQX | 職人計算機</h5>
-            <p class="card-text">作成物に必要な素材をまとめて計算できるツールです。木工職人とさいほう職人向けの計算機能もあります。</p>
-            <a href="/dq10/crafter-calculator/" class="btn btn-primary w-100">使ってみる</a>
-          </div>
-        </div>
-      </div>
-	  <!-- ブログ -->
-	  <div class="col-12 col-md-6 col-lg-4">
-	    <div class="card h-100 shadow-sm">
-	      <div class="card-body">
-	        <h5 class="card-title">ブログ</h5>
-	        <p class="card-text">ちけがいろいろな記事を書いていくページ。</p>
-	        <a href="/blog/" class="btn btn-primary w-100">見てみる</a>
-	      </div>
-	    </div>
-	  </div>
-    </div>
-  </main>
-  	</section>
-  </html>
+
+<title layout:fragment="title">
+	ちけの便利ツール
+</title>
+<section layout:fragment="page-title">
+	ちけの便利ツール
+</section>
+<!-- ページ専用CSSを追加 -->
+<section layout:fragment="head-extra">
+</section>
+
+
+<section layout:fragment="content">
+	<!-- メイン -->
+	<main class="flex-grow-1 container">
+		<h2 class="subtitle">提供中のツール</h2>
+		<div class="row g-4">
+
+			<!-- DQX 職人素材計算機 -->
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card h-100 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">DQX | 職人計算機</h5>
+						<p class="card-text">作成物に必要な素材をまとめて計算できるツールです。木工職人とさいほう職人向けの計算機能もあります。</p>
+						<a href="/dq10/crafter-calculator/" class="btn btn-primary w-100">使ってみる</a>
+					</div>
+				</div>
+			</div>
+			<!-- ブログ -->
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card h-100 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">ブログ</h5>
+						<p class="card-text">ちけがいろいろな記事を書いていくページ。</p>
+						<a href="/blog/" class="btn btn-primary w-100">見てみる</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</section>
+
+</html>
