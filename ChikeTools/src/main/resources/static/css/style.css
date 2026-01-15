@@ -17,8 +17,9 @@ header {
 	color: #959595
 }
 
-.icon, .icon a {
-  height: 100%;
+.icon,
+.icon a {
+	height: 100%;
 }
 
 .icon img {
@@ -29,16 +30,18 @@ header {
 	object-fit: contain;
 }
 
-.contact a {
+.menu a {
 	color: darkgrey;
 	font-size: 20px;
+	text-decoration: none;
 }
 
-.contact a:hover {
+.menu a:hover {
 	color: #ffffff;
 }
+
 h2.subtitle {
-	margin-bottom:16px;
+	margin-bottom: 16px;
 }
 
 /* 左カード高さ固定 */
@@ -71,11 +74,13 @@ h2.subtitle {
 	.icon img {
 		flex: 0 0 30%;
 	}
+
 	.contact a {
-	color: #373737;
+		color: #373737;
 	}
+
 	.contact a:hover {
-	color: #aaaaaa;
+		color: #aaaaaa;
 	}
 }
 

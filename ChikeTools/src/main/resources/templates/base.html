@@ -8,7 +8,7 @@
 	<!-- 共通CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" 	th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 	<!-- ページ固有CSSをここに挿入 -->
 	<section layout:fragment="head-extra"></section>
 	<link rel="canonical" href="https://chiketools.com/">
@@ -16,12 +16,12 @@
 	<meta name="keywords" content="DQX, ドラクエ10, ドラゴンクエストX, 職人計算機, ツール, 便利">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="DQX | 職人計算機">
-	<meta property="og:description" content=	"ちけの便利ツールは、ドラゴンクエストXなどのゲームや日常に役立つ無料ツールを提供しています。">
+	<meta property="og:description" content="ちけの便利ツールは、ドラゴンクエストXなどのゲームや日常に役立つ無料ツールを提供しています。">
 	<meta property="og:url" content="https://chiketools.com/">
 	<meta property="og:type" content="website">
 	<meta name="google-site-verification" content="dIrrBwLV2o-NdNuDC0CJnG01g4_RXQ8My1fXKS4EgAc" />
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7886700851072663"
-	     crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -29,7 +29,7 @@
 	<header class="d-flex flex-row align-items-center justify-content-between">
 		<!-- 左：アイコン -->
 		<div class="icon d-flex align-items-center">
-			<a href="https://chiketools.com/" >	
+			<a href="https://chiketools.com/">
 				<img th:src="@{/image/ちけの便利ツール_紫.png}" alt="アイコン" style="cursor: pointer;">
 			</a>
 		</div>
@@ -38,31 +38,36 @@
 		<h1 class="page-title" layout:fragment="page-title">ちけの便利ツール</h1>
 
 		<!-- 右：お問い合わせ -->
-		<div class="contact d-none d-md-block">
-			<a href="contact"
-				class="text-decoration-none">
+		<div class="menu d-none d-md-flex align-items-center gap-4 text-decoration-none">
+			<a href="https://chiketools.com/auth/login/">
+				ログイン
+			</a>
+			<a href="https://chiketools.com/auth/signup/">
+				サインアップ
+			</a>
+			<a href="contact">
 				<i class="bi bi-envelope-fill"></i> お問い合わせ
 			</a>
 		</div>
 	</header>
 	<div class="contact d-block d-md-none d-flex justify-content-center">
-		<a href="contact"
-			class="text-decoration-none">
+		<a href="https://chiketools.com/auth/"></a>
+		<a href="contact" class="text-decoration-none">
 			<i class="bi bi-envelope-fill"></i> お問い合わせ
 		</a>
 	</div>
-	 <main layout:fragment="content" class="flex-grow-1">
-	     <!-- 子ページの内容がここに入る -->
-	 </main>
+	<main layout:fragment="content" class="flex-grow-1">
+		<!-- 子ページの内容がここに入る -->
+	</main>
 	<!-- フッター -->
 	<footer class="border-top bg-light">
 		<div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
-		  <a href="privacy-policy" class="text-decoration-none mx-2 my-1">プライバシーポリシー</a>
-		  <a href="terms" class="text-decoration-none mx-2 my-1">利用規約</a>
+			<a href="privacy-policy" class="text-decoration-none mx-2 my-1">プライバシーポリシー</a>
+			<a href="terms" class="text-decoration-none mx-2 my-1">利用規約</a>
 		</div>
 		<div class="text-center mt-1">
-	  		<small>© 2025 chiketools.com</small>
-	  	</div>
+			<small>© 2025 chiketools.com</small>
+		</div>
 	</footer>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script th:src="@{/js/script.js}"></script>
