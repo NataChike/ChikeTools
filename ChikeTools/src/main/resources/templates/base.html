@@ -39,8 +39,16 @@
 
 		<!-- 右：お問い合わせ -->
 		<div class="menu d-none d-md-flex align-items-center gap-4 text-decoration-none">
-			<a href="https://chiketools.com/auth/login/">
+			<span th:if="${#authorization.expression('isAuthenticated()')}">
+			  [[${#authentication.name}]] さん
+			</span>
+			<a th:if="${#authorization.expression('!isAuthenticated()')}"
+			href="https://chiketools.com/auth/login/">
 				ログイン
+			</a>
+			<a th:if="${#authorization.expression('isAuthenticated()')}"
+			href="https://chiketools.com/auth/logout/">
+				ログアウト
 			</a>
 			<a href="contact">
 				<i class="bi bi-envelope-fill"></i> お問い合わせ
