@@ -42,14 +42,12 @@
 			<span th:if="${#authorization.expression('isAuthenticated()')}">
 				ようこそ <span th:text="${#authentication.name}"></span> さん
 			</span>
-			<a th:if="${#authorization.expression('!isAuthenticated()')}"
-			href="https://chiketools.com/auth/login/">
+			<button th:if="${#authorization.expression('!isAuthenticated()')}" href="https://chiketools.com/auth/login/">
 				ログイン
-			</a>
-			<a th:if="${#authorization.expression('isAuthenticated()')}"
-			href="https://chiketools.com/auth/logout/">
-				ログアウト
-			</a>
+			</button>
+			<form th:action="@{/logout}" method="post" th:if="${#authorization.expression('isAuthenticated()')}">
+				<button type="submit">ログアウト</button>
+			</form>
 			<a href="contact">
 				<i class="bi bi-envelope-fill"></i> お問い合わせ
 			</a>
