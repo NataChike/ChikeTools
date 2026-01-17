@@ -40,7 +40,7 @@
 		<!-- 右：お問い合わせ -->
 		<div class="menu d-none d-md-flex align-items-center gap-4 text-decoration-none">
 			<span th:if="${#authorization.expression('isAuthenticated()')}">
-				さん
+				ようこそ <span th:text="${#authentication.name}"></span> さん
 			</span>
 			<a th:if="${#authorization.expression('!isAuthenticated()')}"
 			href="https://chiketools.com/auth/login/">
