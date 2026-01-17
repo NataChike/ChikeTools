@@ -36,6 +36,12 @@ header {
 	text-decoration: none;
 }
 
+.menu span {
+	color: darkgrey;
+	font-size: 20px;
+	text-decoration: none;
+}
+
 .menu a:hover {
 	color: #ffffff;
 }
