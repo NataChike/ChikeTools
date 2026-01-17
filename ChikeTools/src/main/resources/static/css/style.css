@@ -36,10 +36,25 @@ header {
 	text-decoration: none;
 }
 
+.menu form {
+	color: darkgrey;
+	font-size: 20px;
+	text-decoration: none;
+}
+.menu button {
+	color: darkgrey;
+	font-size: 20px;
+	text-decoration: none;
+}
+
 .menu span {
 	color: darkgrey;
 	font-size: 20px;
 	text-decoration: none;
+}
+
+.menu a:hover {
+	color: #ffffff;
 }
 
 .menu a:hover {
