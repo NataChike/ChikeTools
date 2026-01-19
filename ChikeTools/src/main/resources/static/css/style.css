@@ -41,6 +41,7 @@ header {
 	font-size: 20px;
 	text-decoration: none;
 }
+
 .menu button {
 	color: darkgrey;
 	font-size: 20px;
@@ -59,6 +60,66 @@ header {
 
 .menu a:hover {
 	color: #ffffff;
+}
+
+#mobileMenu {
+	background-color: #373737;
+}
+
+#mobileMenu .bg-light {
+	background-color: #373737 !important;
+}
+
+#mobileMenu ul {
+	margin: 0;
+	padding: 0;
+}
+
+#mobileMenu li {
+	padding: 12px 0;
+	border-bottom: 1px solid #555;
+}
+
+#mobileMenu li:last-child {
+	border-bottom: none;
+}
+
+/* メニュー共通 */
+#mobileMenu a,
+#mobileMenu span {
+	color: darkgrey;
+	font-size: 1.05rem;
+	text-decoration: none;
+	display: block;
+}
+
+/* hover */
+#mobileMenu a:hover {
+	color: #ffffff;
+}
+
+/* ようこそ表示 */
+#mobileMenu span strong {
+	color: #ffffff;
+}
+
+/* ログアウトを少し目立たせる */
+#mobileMenu a.logout {
+	color: #ff9e9e;
+}
+
+#mobileMenu a.logout:hover {
+	color: #ff6b6b;
+}
+
+/* アイコン余白 */
+#mobileMenu i {
+	margin-right: 6px;
+}
+
+/* collapse アニメーションを滑らかに */
+.collapse {
+	transition: height 0.25s ease;
 }
 
 h2.subtitle {
@@ -80,8 +141,12 @@ h2.subtitle {
 
 /* スマホ用（幅768px未満） */
 @media (max-width: 767.98px) {
+	section.flex-grow-1 {
+		margin-top: 8px;
+	}
+
 	header {
-		margin-bottom: 8px;
+		margin-bottom: 0px;
 	}
 
 	div.left-column {
