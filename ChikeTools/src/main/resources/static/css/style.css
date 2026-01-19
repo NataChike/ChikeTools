@@ -62,6 +62,10 @@ header {
 	color: #ffffff;
 }
 
+strong {
+	color: #ffffff;
+}
+
 header .bi-list {
 	color: darkgrey;
 	transition: color 0.2s ease;
