@@ -2,80 +2,134 @@
 <html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<title layout:fragment="title">ちけの便利ツール</title>
-	<link rel="icon" type="image/x-icon" th:href="@{/image/favicon.ico}" />
-	<!-- 共通CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" th:href="@{/css/style.css}">
-	<!-- ページ固有CSSをここに挿入 -->
-	<section layout:fragment="head-extra"></section>
-	<link rel="canonical" href="https://chiketools.com/">
-	<meta name="description" content="ちけの便利ツールは、ドラゴンクエストXなどのゲームや日常に役立つ無料ツールを提供しています。">
-	<meta name="keywords" content="DQX, ドラクエ10, ドラゴンクエストX, 職人計算機, ツール, 便利">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="DQX | 職人計算機">
-	<meta property="og:description" content="ちけの便利ツールは、ドラゴンクエストXなどのゲームや日常に役立つ無料ツールを提供しています。">
-	<meta property="og:url" content="https://chiketools.com/">
-	<meta property="og:type" content="website">
-	<meta name="google-site-verification" content="dIrrBwLV2o-NdNuDC0CJnG01g4_RXQ8My1fXKS4EgAc" />
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7886700851072663"
-		crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">ちけの便利ツール</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/image/favicon.ico}" />
+
+    <!-- 共通CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <section layout:fragment="head-extra"></section>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-	<!-- ヘッダー -->
-	<header class="d-flex flex-row align-items-center justify-content-between">
-		<!-- 左：アイコン -->
-		<div class="icon d-flex align-items-center">
-			<a href="https://chiketools.com/">
-				<img th:src="@{/image/ちけの便利ツール_紫.png}" alt="アイコン" style="cursor: pointer;">
-			</a>
-		</div>
 
-		<!-- 中央：タイトル -->
-		<h1 class="page-title" layout:fragment="page-title">ちけの便利ツール</h1>
+<!-- ================= ヘッダー ================= -->
+<header class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
 
-		<!-- 右：お問い合わせ -->
-		<div class="menu d-none d-md-flex align-items-center gap-4 text-decoration-none">
-			<span th:if="${#authorization.expression('isAuthenticated()')}">
-				ようこそ <span th:text="${#authentication.name}"></span> さん
-			</span>
-			<a th:if="${#authorization.expression('!isAuthenticated()')}" href="https://chiketools.com/auth/login">
-				ログイン
-			</a>
-			<a th:if="${#authorization.expression('isAuthenticated()')}" href="https://chiketools.com/auth/logout">
-				ログアウト
-			</a>
-			<a href="contact">
-				<i class="bi bi-envelope-fill"></i> お問い合わせ
-			</a>
-		</div>
-	</header>
-	<div class="contact d-block d-md-none d-flex justify-content-center">
-		<a href="https://chiketools.com/auth/"></a>
-		<a href="contact" class="text-decoration-none">
-			<i class="bi bi-envelope-fill"></i> お問い合わせ
-		</a>
-	</div>
-	<main layout:fragment="content" class="flex-grow-1">
-		<!-- 子ページの内容がここに入る -->
-	</main>
-	<!-- フッター -->
-	<footer class="border-top bg-light">
-		<div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
-			<a href="privacy-policy" class="text-decoration-none mx-2 my-1">プライバシーポリシー</a>
-			<a href="terms" class="text-decoration-none mx-2 my-1">利用規約</a>
-		</div>
-		<div class="text-center mt-1">
-			<small>© 2025 chiketools.com</small>
-		</div>
-	</footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script th:src="@{/js/script.js}"></script>
-	<!-- ページ固有JSをここに挿入 -->
-	<section layout:fragment="foot-extra"></section>
+    <!-- 左：ロゴ -->
+    <div class="icon d-flex align-items-center">
+        <a href="https://chiketools.com/">
+            <img th:src="@{/image/ちけの便利ツール_紫.png}" alt="アイコン" style="height:40px;">
+        </a>
+    </div>
+
+    <!-- 中央：タイトル -->
+    <h1 class="page-title m-0 d-none d-md-block"
+        layout:fragment="page-title">
+        ちけの便利ツール
+    </h1>
+
+    <!-- 右：PCメニュー -->
+    <div class="menu d-none d-md-flex align-items-center gap-4">
+
+        <span th:if="${#authorization.expression('isAuthenticated()')}">
+            ようこそ <span th:text="${#authentication.name}"></span> さん
+        </span>
+
+        <a th:if="${#authorization.expression('!isAuthenticated()')}"
+           href="https://chiketools.com/auth/login">
+            ログイン
+        </a>
+
+        <a th:if="${#authorization.expression('isAuthenticated()')}"
+           href="https://chiketools.com/auth/logout">
+            ログアウト
+        </a>
+
+        <a href="contact">
+            <i class="bi bi-envelope-fill"></i> お問い合わせ
+        </a>
+    </div>
+
+    <!-- 右：モバイル用ハンバーガー -->
+    <button class="btn d-md-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+    </button>
+
+</header>
+
+<!-- ================= モバイルメニュー ================= -->
+<div class="collapse d-md-none" id="mobileMenu">
+    <div class="bg-light border-bottom p-3">
+        <ul class="list-unstyled mb-0">
+
+            <!-- ログイン中 -->
+            <li th:if="${#authorization.expression('isAuthenticated()')}">
+                <div class="mb-2">
+                    ようこそ <strong th:text="${#authentication.name}"></strong> さん
+                </div>
+
+                <a href="https://chiketools.com/auth/logout"
+                   class="d-block text-decoration-none mb-2"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#mobileMenu">
+                    ログアウト
+                </a>
+            </li>
+
+            <!-- 未ログイン -->
+            <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                <a href="https://chiketools.com/auth/login"
+                   class="d-block text-decoration-none mb-2"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#mobileMenu">
+                    ログイン
+                </a>
+            </li>
+
+            <!-- 共通 -->
+            <li>
+                <a href="contact"
+                   class="d-block text-decoration-none"
+                   data-bs-toggle="collapse"
+                   data-bs-target="#mobileMenu">
+                    <i class="bi bi-envelope-fill"></i> お問い合わせ
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!-- ================= メイン ================= -->
+<main layout:fragment="content" class="flex-grow-1">
+</main>
+
+<!-- ================= フッター ================= -->
+<footer class="border-top bg-light mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center py-2">
+        <a href="privacy-policy" class="text-decoration-none mx-2">プライバシーポリシー</a>
+        <a href="terms" class="text-decoration-none mx-2">利用規約</a>
+    </div>
+    <div class="text-center">
+        <small>© 2025 chiketools.com</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/script.js}"></script>
+
+<section layout:fragment="foot-extra"></section>
 </body>
-
 </html>
