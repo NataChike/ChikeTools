@@ -5,59 +5,100 @@
 <title layout:fragment="title">
 	プロフィール | ちけの便利ツール
 </title>
+
 <section layout:fragment="page-title">
-	プロフィール
+	<i class="bi bi-person-circle me-2"></i>プロフィール
 </section>
+
 <!-- ページ専用CSSを追加 -->
 <section layout:fragment="head-extra">
+	<style>
+		.profile-image {
+			max-width: 180px;
+			border-radius: 50%;
+		}
+		#about strong {
+		  color: var(--bs-body-color);
+		  font-weight: 600;
+		}
+	</style>
 </section>
 
 <section layout:fragment="content">
-
 	<main class="flex-grow-1 container py-4">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-8 col-lg-6">
-				<h2 class="mb-3">管理者プロフィール</h2>
-				<section id="image">
-					<img th:src="@{/image/ちけのプロフィール画像.jpg}">
+
+				<h2 class="mb-4 text-center">
+					<i class="bi bi-person-fill me-2"></i>管理者プロフィール
+				</h2>
+
+				<!-- プロフィール画像 -->
+				<section id="image" class="text-center mb-4">
+					<img th:src="@{/image/ちけのプロフィール画像.jpg}" alt="ちけのプロフィール画像" class="profile-image img-fluid shadow-sm">
 				</section>
-				<section id="about">
-					<h3>About</h3>
+
+				<!-- About -->
+				<section id="about" class="mb-4">
+					<h3>
+						<i class="bi bi-chat-heart-fill me-2"></i>About
+					</h3>
 					<p>
 						わざわざプロフィールページに飛んでいただきありがとうございます！<br>
-						このサイトを運営しているちけと申します。<br>
+						このサイトを運営している <strong>ちけ</strong> と申します。
 					</p>
 				</section>
-				<section id="skill">
-					<h3>Skill</h3>
-					<ul>
-						<li>Java</li>
-						<li>Python</li>
-						<li>TypeScript</li>
-						<li>Springboot</li>
-						<li>Django</li>
-						<li>Angular</li>
-						<li>PostgreSQL</li>
-						<li>AWS</li>
+
+				<!-- Skill -->
+				<section id="skill" class="mb-4">
+					<h3>
+						<i class="bi bi-code-slash me-2"></i>Skill
+					</h3>
+					<ul class="list-unstyled">
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>Java</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>Python</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>TypeScript</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>Spring Boot</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>Django</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>Angular</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>PostgreSQL</li>
+						<li><i class="bi bi-check-circle-fill text-success me-1"></i>AWS</li>
 					</ul>
 				</section>
-				<section id="hobby">
-					<h3>Hobby</h3>
-					<ul>
-						<li>ドライブ</li>
-						<li>ペット（モルモット）</li>
-						<li>アニメ鑑賞</li>
-						<li>ゲーム</li>
-						<li>アプリ作成</li>
+
+				<!-- Hobby -->
+				<section id="hobby" class="mb-4">
+					<h3>
+						<i class="bi bi-heart-fill me-2"></i>Hobby
+					</h3>
+					<ul class="list-unstyled">
+						<li>🚗 ドライブ</li>
+						<li>🐹 ペット（モルモット）</li>
+						<li>📺 アニメ鑑賞</li>
+						<li>🎮 ゲーム</li>
+						<li>🛠 アプリ作成</li>
 					</ul>
 				</section>
-				<section id="contact">
-					<h2>Contact</h2>
-					<ul>
-						<li><a href="https://x.com/Chike_Engineer">X</a></li>
-						<li>Email:chiketools@gmail.com（お問い合わせからも可）</li>
+
+				<!-- Contact -->
+				<section id="contact" class="mb-4">
+					<h3>
+						<i class="bi bi-envelope-fill me-2"></i>Contact
+					</h3>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://x.com/Chike_Engineer" target="_blank" rel="noopener">
+								<i class="bi bi-x me-1"></i>X（旧Twitter）
+							</a>
+						</li>
+						<li>
+							<i class="bi bi-envelope me-1"></i>
+							Email: chiketools@gmail.com<br>
+							<small class="text-muted">（お問い合わせページからも可）</small>
+						</li>
 					</ul>
 				</section>
+
 			</div>
 		</div>
 	</main>
