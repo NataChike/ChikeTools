@@ -18,6 +18,11 @@ public class TopController {
 		return "index";
 	}
 
+	@GetMapping("profile")
+	public String profile() {
+		return "profile";
+	}
+
 	@GetMapping("privacy-policy")
 	public String privacyPolicy() {
 		return "privacyPolicy";

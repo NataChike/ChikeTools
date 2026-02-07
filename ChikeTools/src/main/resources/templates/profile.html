@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{base}">
+
+<title layout:fragment="title">
+	プロフィール | ちけの便利ツール
+</title>
+<section layout:fragment="page-title">
+	プロフィール
+</section>
+<!-- ページ専用CSSを追加 -->
+<section layout:fragment="head-extra">
+</section>
+
+<section layout:fragment="content">
+
+	<main class="flex-grow-1 container py-4">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-8 col-lg-6">
+				<h2 class="mb-3">管理者プロフィール</h2>
+				<section id="image">
+					<img th:src="@{/image/ちけのプロフィール画像.jpg}">
+				</section>
+				<section id="about">
+					<h3>About</h3>
+					<p>
+						わざわざプロフィールページに飛んでいただきありがとうございます！<br>
+						このサイトを運営しているちけと申します。<br>
+					</p>
+				</section>
+				<section id="skill">
+					<h3>Skill</h3>
+					<ul>
+						<li>Java</li>
+						<li>Python</li>
+						<li>TypeScript</li>
+						<li>Springboot</li>
+						<li>Django</li>
+						<li>Angular</li>
+						<li>PostgreSQL</li>
+						<li>AWS</li>
+					</ul>
+				</section>
+				<section id="hobby">
+					<h3>Hobby</h3>
+					<ul>
+						<li>ドライブ</li>
+						<li>ペット（モルモット）</li>
+						<li>アニメ鑑賞</li>
+						<li>ゲーム</li>
+						<li>アプリ作成</li>
+					</ul>
+				</section>
+				<section id="contact">
+					<h2>Contact</h2>
+					<ul>
+						<li><a href="https://x.com/Chike_Engineer">X</a></li>
+						<li>Email:chiketools@gmail.com（お問い合わせからも可）</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</main>
+</section>
+
+</html>
