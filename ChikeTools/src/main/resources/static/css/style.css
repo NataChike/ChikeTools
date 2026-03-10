@@ -162,14 +162,6 @@ h2.subtitle {
 		margin-top: 8px;
 	}
 
-	header h1 {
-		flex: 0 0 70%;
-	}
-
-	.icon img {
-		flex: 0 0 30%;
-	}
-
 	.contact a {
 		color: #373737;
 	}
