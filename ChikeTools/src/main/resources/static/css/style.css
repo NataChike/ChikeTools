@@ -148,6 +148,21 @@ h2.subtitle {
 	overflow-y: auto;
 }
 
+.badge-login {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+
+	font-size: 0.7rem;
+	font-weight: 600;
+
+	background: #6f42c1;
+	color: white;
+
+	padding: 3px 6px;
+	border-radius: 5px;
+}
+
 /* スマホ用（幅768px未満） */
 @media (max-width: 767.98px) {
 	section.flex-grow-1 {
