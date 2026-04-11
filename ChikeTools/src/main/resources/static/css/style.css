@@ -58,10 +58,6 @@ header {
 	color: #ffffff;
 }
 
-.menu a:hover {
-	color: #ffffff;
-}
-
 strong {
 	color: #ffffff;
 }
@@ -175,14 +171,6 @@ h2.subtitle {
 
 	div.left-column {
 		margin-top: 8px;
-	}
-
-	.contact a {
-		color: #373737;
-	}
-
-	.contact a:hover {
-		color: #aaaaaa;
 	}
 }
 
